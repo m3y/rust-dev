@@ -13,7 +13,7 @@ RUN apt-get update \
 
 USER ${user}
 
-RUN curl https://sh.rustup.rs -sSf | sh -s -- --default-toolchain stable -y
+RUN curl https://sh.rustup.rs -sSf | sh -s -- --default-toolchain nightly -y
 ENV PATH ${PATH}:/home/${user}/.cargo/bin
 
 WORKDIR /home/${user}
